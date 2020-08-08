@@ -3,8 +3,8 @@
         <div class="back">
             <i class="icon-back"></i>
         </div>
-        <h1 class="title"></h1>
-        <div class="bg-image">
+        <h1 class="title" v-html="title"></h1>
+        <div class="bg-image" :style="style">
             <div class="filter"></div>
         </div>
     </div>
@@ -24,6 +24,11 @@ export default {
             type: String,
             default: ''
         }
+    },
+    computed: {
+      bgStyle() {
+        return `background-image:url(${this.bgImage})`
+      }
     }
 }
 </script>
