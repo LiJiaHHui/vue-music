@@ -13,6 +13,7 @@ var express = require('express')
 var axios = require('axios')
 var app = express()
 var apiRoutes = express.Router()
+const bodyParser = require('body-parser')
 
 const HOST = process.env.HOST
 const PORT = process.env.PORT && Number(process.env.PORT)
